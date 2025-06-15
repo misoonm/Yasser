@@ -1,0 +1,4 @@
+
+User-agent: *
+Allow: /
+Sitemap:https://abdtot.github.io/robots.txt
