@@ -184,7 +184,6 @@
             margin: 10px;
             transition: all 0.3s ease;
             border: 2px solid var(--red);
-            cursor: pointer;
         }
         
         .btn:hover {
@@ -205,11 +204,6 @@
         /* Services Section */
         .section {
             padding: 80px 0;
-            display: none;
-        }
-        
-        .section.active {
-            display: block;
         }
         
         .section-title {
@@ -445,53 +439,6 @@
             color: var(--primary-blue);
         }
         
-        /* Blog Section */
-        .blog-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        
-        .blog-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .blog-image {
-            height: 200px;
-            background-color: #ddd;
-        }
-        
-        .blog-content {
-            padding: 20px;
-        }
-        
-        .blog-meta {
-            display: flex;
-            margin-bottom: 15px;
-            color: var(--primary-blue);
-            font-size: 0.9rem;
-        }
-        
-        .blog-meta span {
-            margin-left: 15px;
-        }
-        
-        .blog-content h3 {
-            margin-bottom: 15px;
-            color: var(--primary-blue);
-        }
-        
-        .read-more {
-            display: inline-block;
-            margin-top: 15px;
-            color: var(--red);
-            font-weight: 600;
-            text-decoration: none;
-        }
-        
         /* Footer */
         footer {
             background-color: var(--primary-blue);
@@ -642,14 +589,14 @@
         <div class="container">
             <div class="header-top">
                 <div class="logo-container">
-                    <img src="1.jpg" alt="المستشفى العربي الدولي" class="hospital-logo">
+                    <img src="1. jpg" alt="المستشفى العربي الدولي" class="hospital-logo">
                     <div class="doctor-info">
                         <h1 class="doctor-name">الدكتور ياسر عباس المؤيد</h1>
                         <p class="specialty">أخصائي جراحة المسالك البولية</p>
                     </div>
                 </div>
-                <div class="contact-header">
-                    <p class="phone">779985327</p>
+                <div class="contact-header">          
+                    <p class="phone">779985327 </p>
                     <p class="emergency"><i class="fas fa-exclamation-circle"></i> للحالات الطارئة: 24/7</p>
                 </div>
             </div>
@@ -661,35 +608,35 @@
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="#home" class="active">الرئيسية</a></li>
-                    <li><a href="#about">عن الدكتور</a></li>
-                    <li><a href="#services">الخدمات</a></li>
-                    <li><a href="#hospital">المستشفى</a></li>
-                    <li><a href="#blog">المقالات</a></li>
-                    <li><a href="#contact">اتصل بنا</a></li>
+                    <li><a href="#" class="active">الرئيسية</a></li>
+                    <li><a href="#">عن الدكتور</a></li>
+                    <li><a href="#">الخدمات</a></li>
+                    <li><a href="#">المستشفى</a></li>
+                    <li><a href="#">المقالات</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
                     <li><a href="#" class="btn">حجز موعد</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Home Page -->
-    <section id="home" class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="doctor-image"></div>
                 <h1>رعاية متخصصة لأمراض المسالك البولية والذكورة</h1>
                 <p>دكتور ياسر عباس المؤيد، أخصائي جراحة المسالك البولية، يقدم لكم أحدث التقنيات والعلاجات المتطورة في مجال المسالك البولية والذكورة والعقم.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn">حجز موعد</a>
-                    <a href="#services" class="btn btn-outline">المزيد عن الخدمات</a>
+                    <a href="#" class="btn">حجز موعد</a>
+                    <a href="#" class="btn btn-outline">المزيد عن الخدمات</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section">
+    <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>الخدمات والحالات المعالجة</h2>
@@ -760,7 +707,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section class="section" style="background-color: var(--light-blue);">
         <div class="container">
             <div class="section-title">
                 <h2>عن الدكتور ياسر عباس المؤيد</h2>
@@ -781,17 +728,14 @@
                         <li>خبرة تزيد عن 5 اعوام في مجال التخصص</li>
                     </ul>
                     
-                    <h4 style="margin-top: 25px; color: var(--primary-blue);">الرؤية والرسالة:</h4>
-                    <p>تتمثل رؤية الدكتور ياسر في تقديم رعاية طبية شاملة ومتطورة في مجال المسالك البولية والذكورة، مع التركيز على استخدام التقنيات الحديثة وتقديم رعاية شخصية لكل مريض. رسالته هي تحسين جودة حياة المرضى من خلال تشخيص دقيق وعلاج فعال.</p>
-                    
-                    <a href="#contact" class="btn" style="margin-top: 20px;">حجز موعد</a>
+                    <a href="#" class="btn" style="margin-top: 20px;">المزيد عن الدكتور</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Hospital Section -->
-    <section id="hospital" class="section">
+    <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>المستشفى العربي الدولي</h2>
@@ -809,71 +753,46 @@
                         <li>جهاز تفتيت الحصوات بالموجات التصادمية</li>
                         <li>مختبرات تحاليل متكاملة</li>
                         <li>أقسام أشعة متطورة (أشعة مقطعية - رنين مغناطيسي)</li>
-                        <li>وحدات عناية مركزة مجهزة بأحدث الأجهزة</li>
-                        <li>صيدلية متكاملة تعمل على مدار 24 ساعة</li>
                     </ul>
                     
                     <h4 style="margin: 20px 0 10px; color: var(--primary-blue);">العنوان:</h4>
                     <p>السنترال، صنعاء، الجمهورية اليمنية، شرق جولة عمران، شارع سيف بن أبو لحوم</p>
-                    
-                    <h4 style="margin: 20px 0 10px; color: var(--primary-blue);">ساعات العمل:</h4>
-                    <p>السبت - الخميس: 8:00 صباحاً - 8:00 مساءً</p>
-                    <p>الجمعة: عطلة</p>
                 </div>
                 
                 <div class="map-container">
                     <!-- خريطة جوجل ستظهر هنا -->
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.187609416522!2d44.20630261533867!3d15.369609689286025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDIyJzEwLjYiTiA0NMKwMTInMzAuOSJF!5e0!3m2!1sen!2sye!4v1620000000000!5m2!1sen!2sye" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="section">
+    <!-- Testimonials Section -->
+    <section class="section" style="background-color: var(--white);">
         <div class="container">
             <div class="section-title">
-                <h2>مقالات طبية</h2>
-                <p>أحدث المعلومات والنصائح الطبية في مجال المسالك البولية والذكورة</p>
+                <h2>آراء المرضى</h2>
             </div>
             
-            <div class="blog-container">
-                <div class="blog-card">
-                    <div class="blog-image"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> 15 يونيو 2023</span>
-                            <span><i class="far fa-user"></i> د. ياسر المؤيد</span>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p>"لقد عانيت من حصوة الكلى لسنوات، وبفضل الله ثم مهارة الدكتور ياسر، تم تفتيت الحصوة بالمنظار دون الحاجة لجراحة كبيرة. شكراً دكتور على الرعاية الممتازة."</p>
+                    <div class="patient-info">
+                        <div class="patient-image"></div>
+                        <div>
+                            <h4> أحمد صالح</h4>
+                            <p>مريض سابق</p>
                         </div>
-                        <h3>أحدث تقنيات تفتيت حصوات الكلى بدون جراحة</h3>
-                        <p>تعرف على التقنيات الحديثة المستخدمة في تفتيت حصوات الكلى والحالب بدون جراحة، وكيف يمكن لهذه التقنيات أن تقلل من فترة النقاهة وتزيد من فعالية العلاج.</p>
-                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </div>
                 
-                <div class="blog-card">
-                    <div class="blog-image"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> 5 يونيو 2023</span>
-                            <span><i class="far fa-user"></i> د. ياسر المؤيد</span>
+                <div class="testimonial">
+                    <p>"الدكتور ياسر يتميز بالدقة والاحترافية في التشخيص والعلاج. تعاملت معه في حالة تضخم البروستاتا وكانت النتائج ممتازة. أنصح الجميع بالعلاج عنده."</p>
+                    <div class="patient-info">
+                        <div class="patient-image"></div>
+                        <div>
+                            <h4>علي عبد الله</h4>
+                            <p>مريض سابق</p>
                         </div>
-                        <h3>تضخم البروستاتا: الأسباب والعلاجات الحديثة</h3>
-                        <p>تضخم البروستاتا من المشاكل الشائعة لدى الرجال بعد سن الأربعين. تعرف على أسباب هذه الحالة وأحدث العلاجات المتاحة للتخفيف من أعراضها.</p>
-                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
-                    </div>
-                </div>
-                
-                <div class="blog-card">
-                    <div class="blog-image"></div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-calendar"></i> 25 مايو 2023</span>
-                            <span><i class="far fa-user"></i> د. ياسر المؤيد</span>
-                        </div>
-                        <h3>أهمية الكشف المبكر عن سرطان البروستاتا</h3>
-                        <p>سرطان البروستاتا من أكثر أنواع السرطانات شيوعاً بين الرجال. اكتشف أهمية الكشف المبكر والفحوصات الدورية التي يمكن أن تنقذ حياتك.</p>
-                        <a href="#" class="read-more">اقرأ المزيد <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </div>
             </div>
@@ -881,7 +800,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>اتصل بنا</h2>
@@ -890,7 +809,7 @@
             <div class="contact-container">
                 <div class="contact-form">
                     <h3 style="color: var(--primary-blue); margin-bottom: 20px;">أرسل استفسارك</h3>
-                    <form id="contactForm">
+                    <form>
                         <div class="form-group">
                             <label for="name">الاسم الكامل</label>
                             <input type="text" id="name" required>
@@ -969,20 +888,6 @@
                             <p>الجمعة: عطلة</p>
                         </div>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>وسائل التواصل الاجتماعي</h4>
-                            <div class="social-links" style="margin-top: 10px;">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1006,24 +911,24 @@
                 <div class="footer-column">
                     <h3>روابط سريعة</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#about">عن الدكتور</a></li>
-                        <li><a href="#services">الخدمات</a></li>
-                        <li><a href="#hospital">المستشفى</a></li>
-                        <li><a href="#blog">المقالات</a></li>
-                        <li><a href="#contact">اتصل بنا</a></li>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">عن الدكتور</a></li>
+                        <li><a href="#">الخدمات</a></li>
+                        <li><a href="#">المستشفى</a></li>
+                        <li><a href="#">المقالات</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>الخدمات</h3>
                     <ul class="footer-links">
-                        <li><a href="#services">تفتيت حصوات الكلى والحالب</a></li>
-                        <li><a href="#services">علاج تضخم البروستاتا</a></li>
-                        <li><a href="#services">الكشف عن أورام المسالك البولية</a></li>
-                        <li><a href="#services">علاج أمراض الذكورة والعقم</a></li>
-                        <li><a href="#services">علاج دوالي الخصية</a></li>
-                        <li><a href="#services">علاج سلس البول</a></li>
+                        <li><a href="#">تفتيت حصوات الكلى والحالب</a></li>
+                        <li><a href="#">علاج تضخم البروستاتا</a></li>
+                        <li><a href="#">الكشف عن أورام المسالك البولية</a></li>
+                        <li><a href="#">علاج أمراض الذكورة والعقم</a></li>
+                        <li><a href="#">علاج دوالي الخصية</a></li>
+                        <li><a href="#">علاج سلس البول</a></li>
                     </ul>
                 </div>
                 
@@ -1045,12 +950,20 @@
     </footer>
 
     <script>
-        // إظهار وإخفاء الصفحات
-        document.addEventListener('DOMContentLoaded', function() {
-            // إظهار الصفحة الرئيسية عند التحميل
-            document.querySelector('#home').classList.add('active');
-            
-            // إضافة حدث النقر على روابط القائمة
-            document.querySelectorAll('nav a').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    // 
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
