@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدكتور ياسر عباس المؤيد - أخصائي جراحة المسالك البولية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #007bff;
+            --light-blue: #e6f2ff;
+            --white: #ffffff;
+            --red: #e63946;
+            --dark-gray: #333;
+            --light-gray: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .hospital-logo {
+            height: 60px;
+            margin-left: 20px;
+        }
+        
+        .doctor-info {
+            text-align: center;
+        }
+        
+        .doctor-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+        
+        .specialty {
+            color: var(--red);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        
+        .contact-header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .phone {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+        
+        .emergency {
+            color: var(--red);
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        
+        nav {
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+        }
+        
+        nav ul li a.active {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .doctor-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            margin: 0 auto 30px;
+            background-color: #ccc;
+            overflow: hidden;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--red);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 10px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--red);
+        }
+        
+        .btn:hover {
+            background-color: transparent;
+            color: var(--white);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+        }
+        
+        /* Services Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-blue);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--red);
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            height: 150px;
+            background-color: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-size: 3rem;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-content h3 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 400px;
+            background-color: #ddd;
+        }
+        
+        .about-text h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .qualifications {
+            margin-top: 30px;
+        }
+        
+        .qualifications li {
+            margin-bottom: 10px;
+            list-style: none;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .qualifications li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--red);
+        }
+        
+        /* Hospital Section */
+        .hospital-info {
+            background-color: var(--light-blue);
+            padding: 40px;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .hospital-details h3 {
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+        
+        .map-container {
+            height: 300px;
+            background-color: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        /* Testimonials */
+        .testimonials-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: '\f10d';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2rem;
+            color: var(--light-blue);
+            opacity: 0.5;
+        }
+        
+        .patient-info {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .patient-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-left: 15px;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .contact-form {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        .contact-details {
+            background-color: var(--light-blue);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-left: 15px;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 5px;
+            color: var(--primary-blue);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--red);
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            margin-left: 10px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--red);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content,
+            .contact-container,
+            .hospital-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-container {
+                margin-bottom: 20px;
+            }
+            
+            .contact-header {
+                align-items: center;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                left: 0;
+                background-color: var(--white);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 0;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 15px;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .mobile-menu {
+                display: block;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-container">
+                    <img src="1.jpg" alt="ياسر عباس المؤيد" class="hospital-logo">
+                    <div class="doctor-info">
+                        <h1 class="doctor-name">الدكتور ياسر عباس المؤيد</h1>
+                        <p class="specialty">أخصائي جراحة المسالك البولية</p>
+                    </div>
+                </div>
+                <div class="contact-header">
+                    <p class="phone"><i class="fas fa-phone"></i> 01-59 59 59</p>
+                    <p class="phone">779985327</p>
+                    <p class="emergency"><i class="fas fa-exclamation-circle"></i> للحالات الطارئة: /</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <nav>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul>
+                    <li><a href="#" class="active">الرئيسية</a></li>
+                    <li><a href="#">عن الدكتور</a></li>
+                    <li><a href="#">الخدمات</a></li>
+                    <li><a href="#">المستشفى</a></li>
+                    <li><a href="#">المقالات</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                    <li><a href="#" class="btn">حجز موعد</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="doctor-image"></div>
+                <h1>رعاية متخصصة لأمراض المسالك البولية والذكورة</h1>
+                <p>دكتور ياسر عباس المؤيد، أخصائي جراحة المسالك البولية، يقدم لكم أحدث التقنيات والعلاجات المتطورة في مجال المسالك البولية والذكورة والعقم.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn">حجز موعد</a>
+                    <a href="#" class="btn btn-outline">المزيد عن الخدمات</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>الخدمات والحالات المعالجة</h2>
+            </div>
+            
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-kidneys"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>تفتيت حصوات الكلى والحالب</h3>
+                        <p>استخدام أحدث تقنيات التفتيت بالمنظار والفتح الجراحي لعلاج حصوات الكلى والحالب والمثانة.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-procedures"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>علاج تضخم البروستاتا</h3>
+                        <p>تشخيص وعلاج حالات تضخم البروستاتا باستخدام التقنيات الحديثة والجراحية المتطورة.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>الكشف عن الأورام</h3>
+                        <p>الكشف المبكر عن أورام المسالك البولية والبروستاتا والخصيتين واستئصالها جراحياً أو بالمنظار.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-male"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>أمراض الذكورة والعقم</h3>
+                        <p>تشخيص وعلاج أمراض الذكورة وضعف الخصوبة والعقم باستخدام أحدث البروتوكولات العلاجية.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>الالتهابات البولية</h3>
+                        <p>علاج التهابات المسالك البولية والبروستاتا والخصيتين باستخدام الأدوية والعلاجات المناسبة.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>سلس البول والتبول اللاإرادي</h3>
+                        <p>تشخيص وعلاج حالات سلس البول والتبول اللاإرادي بطرق متعددة حسب حالة كل مريض.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" style="background-color: var(--light-blue);">
+        <div class="container">
+            <div class="section-title">
+                <h2>عن الدكتور ياسر عباس المؤيد</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image"></div>
+                <div class="about-text">
+                    <h3>خبرة واسعة في جراحة المسالك البولية</h3>
+                    <p>الدكتور ياسر عباس المؤيد هو أخصائي جراحة المسالك البولية المعتمد، يتمتع بخبرة واسعة في تشخيص وعلاج جميع أمراض المسالك البولية والذكورة والعقم. يلتزم الدكتور المؤيد بتقديم رعاية شاملة ومتمحورة حول المريض باستخدام أحدث التقنيات الطبية والجراحية.</p>
+                    
+                    <h4 style="margin-top: 25px; color: var(--primary-blue);">المؤهلات العلمية والخبرات:</h4>
+                    <ul class="qualifications">
+                        <li>دكتوراه في جراحة المسالك البولية من جامعة مرموقة</li>
+                        <li>زمالة في جراحة المسالك البولية المتقدمة والمناظير</li>
+                        <li>أخصائي جراحة المسالك البولية في المستشفى العربي الدولي</li>
+                        <li>عضو في الجمعية العالمية لجراحة المسالك البولية</li>
+                        <li>خبرة تزيد عن 15 عاماً في مجال التخصص</li>
+                    </ul>
+                    
+                    <a href="#" class="btn" style="margin-top: 20px;">المزيد عن الدكتور</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospital Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>المستشفى العربي الدولي</h2>
+            </div>
+            
+            <div class="hospital-info">
+                <div class="hospital-details">
+                    <h3>مركز متكامل للرعاية الصحية</h3>
+                    <p>يعمل الدكتور ياسر عباس المؤيد في المستشفى العربي الدولي، أحد أرقى المستشفيات في اليمن، والذي يضم أحدث التجهيزات الطبية وغرف العمليات المتطورة.</p>
+                    
+                    <h4 style="margin: 20px 0 10px; color: var(--primary-blue);">مرافق المستشفى:</h4>
+                    <ul class="qualifications">
+                        <li>وحدات جراحية متطورة مجهزة بأحدث التقنيات</li>
+                        <li>أجهزة مناظير المسالك البولية الحديثة</li>
+                        <li>جهاز تفتيت الحصوات بالموجات التصادمية</li>
+                        <li>مختبرات تحاليل متكاملة</li>
+                        <li>أقسام أشعة متطورة (أشعة مقطعية - رنين مغناطيسي)</li>
+                    </ul>
+                    
+                    <h4 style="margin: 20px 0 10px; color: var(--primary-blue);">العنوان:</h4>
+                    <p>السنترال، صنعاء، الجمهورية اليمنية، شرق جولة عمران، شارع سيف بن أبو لحوم</p>
+                </div>
+                
+                <div class="map-container">
+                    <!-- خريطة جوجل ستظهر هنا -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section" style="background-color: var(--white);">
+        <div class="container">
+            <div class="section-title">
+                <h2>آراء المرضى</h2>
+            </div>
+            
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p>"لقد عانيت من حصوة الكلى لسنوات، وبفضل الله ثم مهارة الدكتور ياسر، تم تفتيت الحصوة بالمنظار دون الحاجة لجراحة كبيرة. شكراً دكتور على الرعاية الممتازة."</p>
+                    <div class="patient-info">
+                        <div class="patient-image"></div>
+                        <div>
+                            <h4>محمد أحمد</h4>
+                            <p>مريض سابق</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"الدكتور ياسر يتميز بالدقة والاحترافية في التشخيص والعلاج. تعاملت معه في حالة تضخم البروستاتا وكانت النتائج ممتازة. أنصح الجميع بالعلاج عنده."</p>
+                    <div class="patient-info">
+                        <div class="patient-image"></div>
+                        <div>
+                            <h4>علي عبد الله</h4>
+                            <p>مريض سابق</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>اتصل بنا</h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 20px;">أرسل استفسارك</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <select id="subject">
+                                <option>استفسار عام</option>
+                                <option>حجز موعد</option>
+                                <option>استفسار عن خدمة</option>
+                                <option>استشارة طبية</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">إرسال الرسالة</button>
+                    </form>
+                </div>
+                
+                <div class="contact-details">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 20px;">معلومات التواصل</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>العنوان</h4>
+                            <p>المستشفى العربي الدولي، السنترال، صنعاء، الجمهورية اليمنية، شرق جولة عمران، شارع سيف بن أبو لحوم</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>الهاتف</h4>
+                            <p>01-59 59 59</p>
+                            <p>775 59 59 59</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>البريد الإلكتروني</h4>
+                            <p>info@dr-yasser-abbas.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>ساعات العمل</h4>
+                            <p>السبت - الخميس: 8:00 صباحاً - 8:00 مساءً</p>
+                            <p>الجمعة: عطلة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>عن الدكتور</h3>
+                    <p>الدكتور ياسر عباس المؤيد أخصائي جراحة المسالك البولية، يقدم خدمات تشخيصية وعلاجية متكاملة لأمراض المسالك البولية والذكورة والعقم باستخدام أحدث التقنيات الطبية.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">عن الدكتور</a></li>
+                        <li><a href="#">الخدمات</a></li>
+                        <li><a href="#">المستشفى</a></li>
+                        <li><a href="#">المقالات</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>الخدمات</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">تفتيت حصوات الكلى والحالب</a></li>
+                        <li><a href="#">علاج تضخم البروستاتا</a></li>
+                        <li><a href="#">الكشف عن أورام المسالك البولية</a></li>
+                        <li><a href="#">علاج أمراض الذكورة والعقم</a></li>
+                        <li><a href="#">علاج دوالي الخصية</a></li>
+                        <li><a href="#">علاج سلس البول</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>اتصل بنا</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> المستشفى العربي الدولي، صنعاء</li>
+                        <li><i class="fas fa-phone"></i> 01-59 59 59</li>
+                        <li><i class="fas fa-phone"></i> 775 59 59 59</li>
+                        <li><i class="fas fa-envelope"></i> info@dr-yasser-abbas.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>جميع الحقوق محفوظة &copy; 2023 الدكتور ياسر عباس المؤيد - أخصائي جراحة المسالك البولية</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
